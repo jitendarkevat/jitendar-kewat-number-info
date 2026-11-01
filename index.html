@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jitendar Kewat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+background:#071426;
+color:white;
+text-align:center;
+font-family:Arial;
+padding:30px;
+}
+.card {
+background:#10243c;
+padding:25px;
+border-radius:20px;
+margin-top:60px;
+}
+h1 {color:#60a5fa;}
+input,button {
+padding:15px;
+margin:10px;
+border-radius:10px;
+}
+button {
+background:#2585ef;
+color:white;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>JITENDAR KEWAT</h1>
+<h2>NUMBER INFORMATION</h2>
+<input id="num" placeholder="Enter Mobile Number">
+<button onclick="check()">SEARCH</button>
+<p id="result">Welcome!</p>
+</div>
+<script>
+function check(){
+let n=document.getElementById("num").value;
+document.getElementById("result").innerText =
+/^\+?[0-9]{7,15}$/.test(n)
+? "Demo ready! API connection pending."
+: "
